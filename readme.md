@@ -8,4 +8,8 @@
 
 ### Commands needed to set up the crontab jobs:
 
+- To see current crontab jobs: crontab -l
+- To edit crontab jobs: crontab -e
+
+
 
