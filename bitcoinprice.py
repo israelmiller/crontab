@@ -1,6 +1,7 @@
 #import packages
 import requests
 import pandas as pd
+import os
 
 
 #set up the url for the api call
@@ -21,9 +22,9 @@ time_extracted['updated'] #extract the time
 price_df = pd.DataFrame(price_extracted)
 time_extracted_string = str(time_extracted['updated'])
 
-filename = str('bitcoin_price(' + (time_extracted_string) + ').csv')
-
+cwd = os.getcwd()
+filepath = cwd + 'bitcoin_price(' + (time_extracted_string) + ').csv'
 
 #save the dataframe to a csv file
-price_df.to_csv(filename, index=False)
+price_df.to_csv(filepath, index=False, )
 
